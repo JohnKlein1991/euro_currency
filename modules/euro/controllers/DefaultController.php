@@ -12,7 +12,7 @@ class DefaultController extends Controller
 {
     public function actionIndex()
     {
-        $currency = $this->actionGetEuroCurrency();
+        $currency = $this->GetEuroCurrency();
         $updateButtonId = $this->module->params['updateButtonId'];
         return $this->render('index',
             [
@@ -21,7 +21,7 @@ class DefaultController extends Controller
             ]
         );
     }
-    private function actionGetEuroCurrency()
+    private function GetEuroCurrency()
     {
         $listApi = $this->module->params['listOfAPI'];
         foreach ($listApi as $item){
